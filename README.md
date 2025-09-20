@@ -1,6 +1,6 @@
 # kotlin-android-learning
 
-My learning & career growth journey documenting **Kotlin**, **Android**, **Clean Architecture**, **CI/CD**, **Testing**, **KMM**, and **AI integrations**.
+My learning journey documenting **Kotlin**, **Android**, **Clean Architecture**, **CI/CD**, **Testing**, **KMM**, and **AI integrations**.
 
 ---
 
