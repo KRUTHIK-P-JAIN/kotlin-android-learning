@@ -1,0 +1,36 @@
+Inline Functions in Kotlin - Theory Notes
+
+1. What is an Inline Function?
+- A function marked with the inline keyword.
+- The compiler copies the function body directly at each call site.
+- Purpose: reduce runtime overhead of higher-order functions (functions that take lambdas as parameters).
+
+2. Why Inline Functions?
+- Normally, passing a lambda creates a Function object.
+- Each call to a normal function with a lambda allocates memory for the lambda.
+- Inline avoids this object creation overhead, improving performance, especially in high-frequency calls.
+
+3. Syntax Example
+inline fun measureTime(action: () -> Unit) {
+    val start = System.currentTimeMillis()
+    action()
+    val end = System.currentTimeMillis()
+    println("Time taken: ${end - start} ms")
+}
+
+4. Key Points to Remember
+1. Use for small, reusable lambda-heavy functions.
+2. Avoid large functions → code is copied at each call site → increases bytecode size.
+3. Inline only improves performance for small/high-frequency lambdas.
+4. When lambda body is heavy, inline effect is negligible, but still prevents object creation.
+5. Inline can be combined with reified types to allow type checks at runtime.
+
+5. Examples in Android
+- Jetpack doOnTextChanged, apply, withLock, synchronized all use inline functions.
+- Inline prevents creating multiple lambda objects in UI callbacks, improving memory efficiency.
+
+6. Summary
+- Inline = compiler-level optimization for higher-order functions.
+- Use inline judiciously for small, high-frequency functions.
+- Avoid inline for very large functions or functions without lambdas.
+- Helps improve both performance and memory usage in Kotlin and Android apps.
