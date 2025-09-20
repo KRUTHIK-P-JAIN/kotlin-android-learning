@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.careerjourneyandroid"
+    namespace = "com.example.kotlin_android_learning"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.careerjourneyandroid"
+        applicationId = "com.example.kotlin_android_learning"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

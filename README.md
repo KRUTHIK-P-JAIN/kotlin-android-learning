@@ -1,4 +1,4 @@
-# career-journey-android
+# kotlin-android-learning
 
 My learning & career growth journey documenting **Kotlin**, **Android**, **Clean Architecture**, **CI/CD**, **Testing**, **KMM**, and **AI integrations**.
 
@@ -6,11 +6,11 @@ My learning & career growth journey documenting **Kotlin**, **Android**, **Clean
 
 ## 📂 Repository Structure
 ```
-career-journey-android/
+kotlin-android-learning/
 │
 ├── README.md                   # Root README (this file)
 └── app/
-    ├── src/main/java/com/example/careerjourneyandroid/
+    ├── src/main/java/com/example/kotlin_android_learning/
     │   └── phase1_kotlin/       # Phase 1: Kotlin foundations
     │
     └── build.gradle
@@ -22,7 +22,7 @@ career-journey-android/
 
 1. **Phase 1 - Kotlin Fundamentals**
     - Core Kotlin concepts with mini tasks and examples.
-    - Detailed topics and progress tracked in [phase1_kotlin/README.md](app/src/main/java/com/example/careerjourneyandroid/phase1_kotlin/README.md).
+    - Detailed topics and progress tracked in [phase1_kotlin/README.md](app/src/main/java/com/example/kotlin_android_learning/phase1_kotlin/README.md).
 
 2. **Phase 2 - Android & Clean Architecture**
     - Build scalable Android apps following modern practices.

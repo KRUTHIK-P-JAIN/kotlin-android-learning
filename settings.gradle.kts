@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CareerJourneyAndroid"
+rootProject.name = "KotlinAndroidLearning"
 include(":app")

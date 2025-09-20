@@ -1,4 +1,4 @@
-package com.example.careerjourneyandroid
+package com.example.kotlin_android_learning
 
 import org.junit.Test
 

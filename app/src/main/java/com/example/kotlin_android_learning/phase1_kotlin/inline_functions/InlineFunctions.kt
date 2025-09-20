@@ -1,4 +1,4 @@
-package com.example.careerjourneyandroid.phase1_kotlin.inline_functions
+package com.example.kotlin_android_learning.phase1_kotlin.inline_functions
 
 // ------------------------------------------------------
 // Inline Function Examples
