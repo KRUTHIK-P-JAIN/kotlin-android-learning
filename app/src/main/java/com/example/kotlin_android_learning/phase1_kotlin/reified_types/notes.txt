@@ -1,0 +1,49 @@
+Reified Types in Kotlin – Theory Notes
+
+1. What are Reified Types?
+- Normally, generic types are erased at runtime on the JVM.
+- Reified types allow access to generic type information at runtime.
+- Must be used with inline functions so the compiler can replace T with the actual type at each call site.
+
+2. Why Reified Types?
+- Enables runtime type checks, which are normally impossible with generics.
+- Useful for:
+  - Safe type casting
+  - Logging type information
+  - Parsing JSON into generic types
+- Without reified, generic type information is lost at runtime.
+
+3. Syntax Example
+inline fun <reified T> isOfType(value: Any): Boolean = value is T
+
+inline fun <reified T> safeCast(value: Any): T? = value as? T
+
+inline fun <reified T> printClassName(value: T? = null) {
+    println("Runtime type: ${T::class}")
+}
+
+inline fun <reified T> parseJson(json: String): T {
+    println("Parsing JSON into: ${T::class}")
+    return when (T::class) {
+        String::class -> json as T
+        Int::class -> json.toInt() as T
+        else -> throw IllegalArgumentException("Unsupported type")
+    }
+}
+
+4. Key Points to Remember
+1. Reified types allow runtime access to generic type information.
+2. Must be used with inline functions.
+3. Ideal for small, reusable, type-dependent operations.
+4. Prevents type-erasure issues in functions like isOfType, safeCast, printClassName, parseJson.
+5. Keep inline function bodies small for efficiency; large bodies increase bytecode size.
+
+5. Examples in Android
+- Safe casting values using reified inline functions.
+- Logging runtime types for debugging or analytics.
+- Parsing JSON generically into correct object types.
+
+6. Summary
+- Reified types + inline functions = runtime type awareness for generics.
+- Helps perform type checking, safe casting, logging, and parsing.
+- Must be small and reusable for optimal performance.

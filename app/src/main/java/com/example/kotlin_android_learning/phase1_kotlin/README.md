@@ -4,12 +4,12 @@ This folder tracks daily learning for Kotlin concepts with mini tasks and real-w
 
 ## Topics Covered
 - [Inline Functions](inline_functions/InlineFunctions.kt)
-- [Reified Types](./ReifiedTypes.kt)
+- [Reified Types](reified_types/ReifiedTypes.kt)
 - [Higher-Order Functions](./HigherOrderFunctions.kt)
 
 ## Progress
 | Topic                  | Status      |
 |------------------------|-------------|
 | Inline Functions       | ✅ Completed |
-| Reified Types          | ⬜ Pending   |
+| Reified Types          | ✅ Completed |
 | Higher-Order Functions | ⬜ Pending   |
